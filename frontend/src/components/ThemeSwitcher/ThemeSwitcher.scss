@@ -1,0 +1,20 @@
+@import '../../styles/theme.scss';
+
+.theme-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+
+.theme-switcher:hover {
+  filter: brightness(0.9);
+}
+

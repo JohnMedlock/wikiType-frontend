@@ -1,0 +1,98 @@
+.typing-test-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden-input {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: transparent;
+  cursor: default;
+  z-index: 1;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.typing-area {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--bg-secondary);
+  margin-bottom: 2rem;
+  
+  .progress {
+    height: 100%;
+    background: var(--accent-primary);
+    transition: width 0.3s ease;
+  }
+}
+
+.wiki-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+
+  h1 {
+    color: var(--text-primary);
+    font-size: 2rem;
+  }
+
+  form {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .wiki-input {
+    flex: 1;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+    }
+  }
+
+  button {
+    padding: 1rem 2rem;
+    background: var(--accent-primary);
+    border: none;
+    border-radius: 4px;
+    color: var(--bg-primary);
+    font-weight: bold;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+      filter: brightness(0.9);
+    }
+  }
+}

@@ -1,0 +1,80 @@
+
+// Settings.scss
+.settings-container {
+    container-type: inline-size;
+    inline-size: min(100% - 2rem, 800px);
+    margin-inline: auto;
+    padding-block: 4rem;
+    color: var(--text-primary);
+  
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      margin-block-end: 3rem;
+      text-align: center;
+    }
+  
+    .settings-section {
+      margin-block-end: 3rem;
+      background: var(--bg-secondary);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+  
+      h2 {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        color: var(--accent-primary);
+        margin-block-end: 1.5rem;
+      }
+  
+      .setting-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 1rem;
+        border-block-end: 1px solid var(--border-color);
+  
+        &:last-child {
+          border-block-end: none;
+        }
+  
+        label {
+          font-size: 1rem;
+          color: var(--text-primary);
+        }
+  
+        select, input[type="number"] {
+          background: var(--bg-primary);
+          border: 1px solid var(--border-color);
+          color: var(--text-primary);
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          font-size: 1rem;
+          transition: border-color 0.2s ease;
+  
+          &:focus-visible {
+            outline: none;
+            border-color: var(--accent-primary);
+          }
+        }
+  
+        input[type="checkbox"] {
+          inline-size: 20px;
+          block-size: 20px;
+          background: var(--bg-primary);
+          border: 1px solid var(--border-color);
+          border-radius: 4px;
+          cursor: pointer;
+  
+          &:checked {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+          }
+  
+          &:focus-visible {
+            outline: none;
+            border-color: var(--accent-primary);
+          }
+        }
+      }
+    }
+  }

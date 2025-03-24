@@ -1,0 +1,48 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .nav-left {
+    .logo {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.05em;
+      
+      &:hover {
+        color: #8ebd6b;
+      }
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 1.5rem;
+
+    .nav-icon {
+      color: #646669;
+      font-size: 1.25rem;
+      transition: color 0.2s ease;
+      cursor: pointer;
+      
+      &:hover {
+        color: #d1d0c5;
+      }
+      
+      &.active {
+        color: #8ebd6b;
+      }
+    }
+  }
+}
